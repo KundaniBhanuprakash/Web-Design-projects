@@ -46,3 +46,19 @@
     border-radius: 2px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+    .card {
+        border-radius: 1rem !important;
+        margin-left: 12px;
+        margin-right: 12px;
+        max-width: 320px;
+    }
+    .card-img-top {
+        border-top-left-radius: 1rem !important;
+        border-top-right-radius: 1rem !important;
+        object-fit: cover;
+        height: 180px;
+    }
+    .row.justify-content-center {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
