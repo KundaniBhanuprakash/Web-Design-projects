@@ -8,7 +8,7 @@
     width: 100%;
     min-height: 100vh;
     box-sizing: border-box;
-    background-color: #038fcbf0;
+    background-color: #698aac;
     padding: 3rem 2rem;
     position: relative;
     top: 0%;
@@ -62,3 +62,24 @@
         margin-left: -12px;
         margin-right: -12px;
     }
+
+    .feature-circle {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background: #f8f9fa;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        padding: 20px;
+        margin: 0 auto;
+      }
+
+        /* Custom shadow and hover effect for cards */
+        .card.custom-shadow {
+            box-shadow: 0 4px 24px rgba(0,0,0,0.18), 0 1.5px 6px rgba(0,0,0,0.10);
+            transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s cubic-bezier(.4,2,.6,1);
+        }
+        .card.custom-shadow:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.22), 0 4px 16px rgba(0,0,0,0.15);
+            z-index: 2;
+        }
