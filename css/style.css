@@ -1,0 +1,25 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
+}
+
+button, a {
+  padding: 8px 15px;
+  margin: 5px;
+  text-decoration: none;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+div {
+  margin-top: 20px;
+}
