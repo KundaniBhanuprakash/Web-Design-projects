@@ -1,20 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Admin Panel</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+      padding: 30px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 28px;
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    /* Card */
+    .card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    .card h3 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    /* Form */
+    .form-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 12px 14px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+
+    button {
+      padding: 12px 20px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    /* Job List */
+    .job {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f9fafb;
+      margin-bottom: 12px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .job-info h4 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .job-info p {
+      font-size: 14px;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+
+    .job-actions button {
+      background: #ef4444;
+      padding: 8px 14px;
+      font-size: 13px;
+      border-radius: 5px;
+    }
+
+    .job-actions button:hover {
+      background: #b91c1c;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h2>Admin Dashboard</h2>
+  <div class="container">
 
-  <input id="title" placeholder="Job Title">
-  <input id="company" placeholder="Company">
-  <input id="location" placeholder="Location">
+    <h2>Admin Dashboard</h2>
 
-  <button onclick="addJob()">Add Job</button>
+    <!-- Add Job -->
+    <div class="card">
+      <h3>Add New Job</h3>
+      <div class="form-group">
+        <input id="title" placeholder="Job Title">
+        <input id="company" placeholder="Company Name">
+        <input id="location" placeholder="Location">
+      </div>
+      <button onclick="addJob()">Add Job</button>
+    </div>
 
-  <h3>Posted Jobs</h3>
-  <div id="adminJobs"></div>
+    <!-- Job List -->
+    <div class="card">
+      <h3>Posted Jobs</h3>
+      <div id="adminJobs"></div>
+    </div>
+
+  </div>
 
   <script src="/js/admin.js"></script>
 </body>
