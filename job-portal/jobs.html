@@ -1,14 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Jobs</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-  <h2>Available Jobs</h2>
+const jobs = [
+  {
+    title: "Frontend Developer",
+    company: "Tech Solutions",
+    location: "Bangalore",
+    skills: ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    title: "Backend Developer",
+    company: "Cloud Systems",
+    location: "Hyderabad",
+    skills: ["Node.js", "Express", "MongoDB"]
+  },
+  {
+    title: "Full Stack Developer",
+    company: "Startup Hub",
+    location: "Remote",
+    skills: ["React", "Node.js", "SQL"]
+  }
+];
 
-  <div id="jobList"></div>
+const jobList = document.getElementById("jobList");
 
-  <script src="/js/jobs.js"></script>
-</body>
-</html>
+jobs.forEach(job => {
+  jobList.innerHTML += `
+    <div class="job-card">
+      <div class="job-title">${job.title}</div>
+      <div class="company">${job.company} • ${job.location}</div>
+      <div class="tags">
+        ${job.skills.map(skill => `<span class="tag">${skill}</span>`).join("")}
+      </div>
+      <a href="#" class="apply-btn">Apply Now</a>
+    </div>
+  `;
+});
